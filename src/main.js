@@ -24,13 +24,13 @@ import {
   faTrash,
   faPenToSquare,
   faSearch,
-  faPlus,
-  faInfo
+  faCirclePlus,
+  faCircleInfo
 
 } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faTrash,faPenToSquare,faSearch,faPlus,faInfo)
+library.add(faTrash,faPenToSquare,faSearch,faCirclePlus,faCircleInfo)
 
 const app = createApp(App)
 

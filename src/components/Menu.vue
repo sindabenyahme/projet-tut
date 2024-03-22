@@ -58,29 +58,30 @@
 
   <div class="Entree">
     <p>Entrée</p>
-    <div class="cards">
+
+    <div class="entree-card">
       <v-card
         class="mx-auto"
         max-width="344"
       >
         <v-img
           height="200px"
-          src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+          src="../assets/pizza.png"
           cover
         ></v-img>
         <v-card-text class="card-text">
-         Plat 1
+         Pizza
         </v-card-text>
-        <v-card-actions>
+        <v-card-actions class="actions">
           <v-btn>
-          <font-awesome-icon icon="fa-solid fa-plus" ></font-awesome-icon>
+          <font-awesome-icon icon="fa-solid fa-circle-plus" size="2xl" ></font-awesome-icon>
           </v-btn>
 
           <v-spacer></v-spacer>
 
           <v-btn
             @click="show = !show"
-          ><font-awesome-icon icon="fa-solid fa-info" /></v-btn>
+          ><font-awesome-icon icon="fa-solid fa-circle-info" size="2xl"/></v-btn>
         </v-card-actions>
 
         <v-expand-transition>
@@ -94,6 +95,7 @@
         </v-expand-transition>
       </v-card>
     </div>
+
   </div>
 </template>
 
@@ -126,5 +128,13 @@ const show = ref(false);
 }
 .card-text{
   text-align: center;
+}
+.entree-card{
+  width: 224px;
+}
+.actions{
+  color:  #fe4d4d;
+  display: inline-flex;
+  margin-left: 36px;
 }
 </style>
