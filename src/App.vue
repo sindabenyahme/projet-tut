@@ -2,11 +2,13 @@
   <v-app>
     <v-app-bar color="#FF0000" dense>
       <v-app-bar-title>Gestion des repas Crous</v-app-bar-title>
-      
+
       <!-- Utilisez router-link pour naviguer vers les pages correspondantes -->
       <router-link to="/" class="nav-link">Accueil</router-link>
+      <router-link to="/Menu" class="nav-link">Menu</router-link>
+
       <router-link to="/login" class="nav-link">Se connecter</router-link>
-      
+
     </v-app-bar>
 
     <v-main>
@@ -39,3 +41,5 @@
 }
 </style>
 
+<script setup>
+</script>
