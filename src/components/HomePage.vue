@@ -21,8 +21,10 @@ export default {
 }
 
 .home-page img {
-  width: 300px; /* Ajustez la taille de l'image selon vos besoins */
-  margin-bottom: 20px; /* Ajoutez un espacement en bas de l'image */
+  width: 250px; 
+  margin-bottom: 20px;
+  
+  
 }
 h1{
   color:red;

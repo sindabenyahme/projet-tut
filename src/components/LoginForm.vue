@@ -12,7 +12,7 @@
           <v-form @submit.prevent="login">
             <v-text-field v-model="email" label="E-mail" type="email"></v-text-field>
             <v-text-field v-model="password" label="Mot de passe" type="password"></v-text-field>
-            <v-btn type="submit" color="#FF0000" class="mt-3">Se connecter</v-btn> <!-- Ajoutez la classe mt-3 pour un espace au-dessus -->
+            <v-btn type="submit" color="#FF0000" class="mt-3">Se connecter</v-btn> 
           </v-form>
         </v-col>
       </v-row>
@@ -41,21 +41,21 @@ export default {
 .auth-container {
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Pour que les éléments soient alignés verticalement */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
 }
 
 .auth-image img {
-  width: 200px; /* Ajustez la largeur de l'image selon vos préférences */
-  margin-bottom: 20px; /* Ajouter un espace en bas de l'image */
+  width: 200px;
+  margin-bottom: 20px; 
 }
 
 .auth-form {
-  width: 100%; /* Assure que le formulaire occupe toute la largeur */
+  width: 100%;
 }
 
 .mt-3 {
-  margin-left: 200px; /* Ajustez cette valeur selon vos préférences */
+  margin-left: 200px; 
 }
 </style>
