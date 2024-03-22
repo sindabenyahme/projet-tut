@@ -7,6 +7,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../components/HomePage.vue';
 import LoginForm from '../components/LoginForm.vue';
+import Menu from "@/components/Menu.vue";
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -20,6 +21,11 @@ const router = createRouter({
       path: '/login',
       name: 'LoginForm',
       component: LoginForm
+    },
+    {
+      path: '/Menu',
+      name: 'MenuPage',
+      component: Menu
     }
   ]
 });
