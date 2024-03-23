@@ -1,43 +1,63 @@
 <template>
   <h2> Mon Panier </h2>
   <div class="panier">
-    <v-card class="plat-card" >
-      <v-img classe ="image" src="../assets/plat.png"></v-img>
-      <p class="plat-nom">Pizza</p>
-      <v-btn icon class="delete-btn" @click="deleteItem(index)">
-        <v-icon>mdi-close</v-icon>
+    <v-card class="plat-card">
+      
+  <v-img class="image" src="../assets/pizza.png"></v-img>
+
+  <p class="plat-nom">Pizza</p>
+  <v-card-actions class="actions">
+    <v-btn>
+      <font-awesome-icon icon="fa-solid fa-circle-xmark" size="2xl" @click="deleteItem(index)"></font-awesome-icon>
+    </v-btn>
+  </v-card-actions>
+  <div class="card-content">
+    <v-card-actions class="add-action">
+      <v-btn>
+        <font-awesome-icon icon="fa-solid fa-circle-minus" size="2xl" @click="decrementQuantity"></font-awesome-icon>
       </v-btn>
-      <div class="card-content">
-        <v-btn icon class="minus-btn" @click="decrementQuantity">
-          <v-icon>mdi-minus</v-icon>
-        </v-btn>
-        <p>{{ quantity }}</p>
-        <v-btn icon class="plus-btn" @click="incrementQuantity">
-          <v-icon>mdi-plus</v-icon>
-        </v-btn>
-      </div>
-    </v-card>
+    </v-card-actions>
+    <p>{{ quantity }}</p>
+    <v-card-actions class="add-action">
+      <v-btn>
+        <font-awesome-icon icon="fa-solid fa-circle-plus" size="2xl" @click="incrementQuantity"></font-awesome-icon>
+      </v-btn>
+    </v-card-actions>
+  </div>
+</v-card>
 
 
   </div>
 
+
+
   <div class="panier">
+
     <v-card class="plat-card">
-      <v-img classe ="image"src="../assets/supp.png" ></v-img>
-      <p class="plat-nom">Coca</p>
-      <v-btn icon class="delete-btn" @click="deleteItem">
-        <v-icon>mdi-close</v-icon>
+      
+  <v-img class="image" src="../assets/supp.png"></v-img>
+
+
+  <p class="plat-nom">Coca</p>
+  <v-card-actions class="actions">
+    <v-btn>
+      <font-awesome-icon icon="fa-solid fa-circle-xmark" size="2xl" @click="deleteItem(index)"></font-awesome-icon>
+    </v-btn>
+  </v-card-actions>
+  <div class="card-content">
+    <v-card-actions class="add-action">
+      <v-btn>
+        <font-awesome-icon icon="fa-solid fa-circle-minus" size="2xl" @click="decrementQuantity"></font-awesome-icon>
       </v-btn>
-      <div class="card-content">
-        <v-btn icon class="minus-btn" @click="decrementQuantity">
-          <v-icon>mdi-minus</v-icon>
-        </v-btn>
-        <p>{{ quantity }}</p>
-        <v-btn icon class="plus-btn" @click="incrementQuantity">
-          <v-icon>mdi-plus</v-icon>
-        </v-btn>
-      </div>
-    </v-card>
+    </v-card-actions>
+    <p>{{ quantity }}</p>
+    <v-card-actions class="add-action">
+      <v-btn>
+        <font-awesome-icon icon="fa-solid fa-circle-plus" size="2xl" @click="incrementQuantity"></font-awesome-icon>
+      </v-btn>
+    </v-card-actions>
+  </div>
+</v-card>
 
 
   </div>
@@ -106,20 +126,6 @@ const incrementQuantity = () => {
   gap: 5px;
 }
 
-.delete-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
-
-.minus-btn {
-  margin-right: 20px;
-}
-
-.plus-btn {
-  margin-left: 10px;
-  margin-right: 20px;
-}
 
 
 
@@ -128,7 +134,8 @@ const incrementQuantity = () => {
   flex-shrink: 1;
   font-size: 20px;
   padding-bottom: 30px;
-  margin-right: 5px;
+  margin-right: 10px;
+  padding-left: 30px;
 }
 .submit-btn {
   background-color: red;
@@ -143,5 +150,24 @@ const incrementQuantity = () => {
 }
 
 
+
+.actions{
+  color:  #fe4d4d;
+  display: inline-flex;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.add-action{
+  color:  #fe4d4d;
+  
+}
+
+.image{
+  background-color: #fe4d4d;
+  border-radius: 39px;
+  height: 150px;
+  width: 100;
+}
 
 </style>
