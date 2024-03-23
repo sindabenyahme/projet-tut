@@ -1,9 +1,9 @@
 <template>
   <h2> Mon Panier </h2>
   <div class="panier">
-    <v-card class="plat-card" > 
-      <v-img classe ="image"src="../assets/plat.png"></v-img>
-      <p class="plat-nom">salade</p>
+    <v-card class="plat-card" >
+      <v-img classe ="image" src="../assets/plat.png"></v-img>
+      <p class="plat-nom">Pizza</p>
       <v-btn icon class="delete-btn" @click="deleteItem(index)">
         <v-icon>mdi-close</v-icon>
       </v-btn>
@@ -17,12 +17,12 @@
         </v-btn>
       </div>
     </v-card>
-    
-  
+
+
   </div>
 
   <div class="panier">
-    <v-card class="plat-card"> 
+    <v-card class="plat-card">
       <v-img classe ="image"src="../assets/supp.png" ></v-img>
       <p class="plat-nom">Coca</p>
       <v-btn icon class="delete-btn" @click="deleteItem">
@@ -38,8 +38,8 @@
         </v-btn>
       </div>
     </v-card>
-    
-    
+
+
   </div>
 
   <div class="total">
@@ -54,7 +54,7 @@ import { ref } from 'vue';
 const quantity = ref(1);
 
 const deleteItem = (index) => {
-  
+
 };
 
 const decrementQuantity = () => {
@@ -78,7 +78,7 @@ const incrementQuantity = () => {
 }
 .prix{
   padding-left:300px;
- 
+
   color:green;
 
 }
@@ -87,18 +87,18 @@ const incrementQuantity = () => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0px; 
+  gap: 0px;
 }
 
 .plat-card {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 5px; 
+  padding: 5px;
   background-color: #cdc5c5;
   margin-bottom: 20px;
   width :600px;
-  height: 150px; 
+  height: 150px;
 }
 .card-content {
   display: flex;
@@ -113,12 +113,12 @@ const incrementQuantity = () => {
 }
 
 .minus-btn {
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 .plus-btn {
   margin-left: 10px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 
@@ -132,14 +132,14 @@ const incrementQuantity = () => {
 }
 .submit-btn {
   background-color: red;
-  color: white; 
-  border: none; 
-  border-radius: 5%; 
-  width: 150px; 
-  height: 50px; 
-  font-size: 15px; 
-  margin-top: 20px; 
-  
+  color: white;
+  border: none;
+  border-radius: 5%;
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  margin-top: 20px;
+
 }
 
 

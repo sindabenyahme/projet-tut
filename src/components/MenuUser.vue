@@ -1,6 +1,7 @@
 <template>
   <h2> Menu </h2>
 <div class="cards">
+  <div class="content">
   <v-card
     class="mx-auto click-card"
     hover
@@ -9,11 +10,12 @@
 
       src="../assets/entree.png"
     ></v-img>
+</v-card>
     <v-card-text class="card-text">
       Entrée
     </v-card-text>
-</v-card>
-
+  </div>
+  <div class="content">
   <v-card
     class="mx-auto click-card"
     hover
@@ -22,11 +24,13 @@
 
       src="../assets/plat.png"
     ></v-img>
+  </v-card>
     <v-card-text class="card-text">
       Plat
     </v-card-text>
-  </v-card>
+  </div>
 
+  <div class="content">
   <v-card
     class="mx-auto click-card"
     hover
@@ -35,11 +39,13 @@
 
       src="../assets/dessert.png"
     ></v-img>
+  </v-card>
     <v-card-text class="card-text">
       Dessert
     </v-card-text>
-  </v-card>
+  </div>
 
+  <div class="content">
   <v-card
     class="mx-auto click-card"
     hover
@@ -47,10 +53,12 @@
     <v-img class="image"
            src="../assets/supp.png"
     ></v-img>
+  </v-card>
     <v-card-text class="card-text">
       Supplément
     </v-card-text>
-  </v-card>
+  </div>
+
 </div>
 
 
@@ -58,30 +66,25 @@
 
   <div class="Entree">
     <p>Entrée</p>
-
-    <div class="entree-card">
       <v-card
-        class="mx-auto"
-        max-width="344"
+        class="mx-auto entree-card"
+        max-width="201"
       >
         <v-img
-          height="200px"
-          src="../assets/pizza.png"
+          height="147px"
+          src="../assets/salade.png"
           cover
         ></v-img>
         <v-card-text class="card-text">
-         Pizza
+         Salade
         </v-card-text>
         <v-card-actions class="actions">
-          <v-btn>
-          <font-awesome-icon icon="fa-solid fa-circle-plus" size="2xl" ></font-awesome-icon>
-          </v-btn>
-
-          <v-spacer></v-spacer>
-
           <v-btn
             @click="show = !show"
           ><font-awesome-icon icon="fa-solid fa-circle-info" size="2xl"/></v-btn>
+          <v-btn>
+            <font-awesome-icon icon="fa-solid fa-circle-plus" size="2xl" ></font-awesome-icon>
+          </v-btn>
         </v-card-actions>
 
         <v-expand-transition>
@@ -95,8 +98,6 @@
         </v-expand-transition>
       </v-card>
     </div>
-
-  </div>
 </template>
 
 <script setup>
@@ -109,6 +110,7 @@ const show = ref(false);
 .cards{
   display: flex;
   padding: 31px;
+  justify-content: space-evenly;
 
 
 }
@@ -119,8 +121,10 @@ const show = ref(false);
   color: white;
 }
 .click-card{
-  max-width: 160px;
-  height: 142px;
+  width: 133px;
+  height: 99px;
+  background-color: #D9D9D9;
+  border-radius: 26px;
 }
 .image{
   width: 200px;
@@ -128,13 +132,19 @@ const show = ref(false);
 }
 .card-text{
   text-align: center;
+  font-weight : 400;
+
 }
 .entree-card{
-  width: 224px;
+  background-color: #D9D9D9;
+  border-radius: 39px;
 }
 .actions{
   color:  #fe4d4d;
   display: inline-flex;
-  margin-left: 36px;
+  margin-left: 22px;
+}
+p{
+  font-weight: 500;
 }
 </style>

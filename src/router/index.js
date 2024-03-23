@@ -7,8 +7,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../components/HomePage.vue';
 import LoginForm from '../components/LoginForm.vue';
-import Menu from "@/components/Menu.vue";
 import Panier from "@/components/Panier.vue";
+import MenuUser from "@/components/MenuUser.vue";
+import MenuAdmin from "@/components/MenuAdmin.vue";
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes: [
@@ -23,9 +24,15 @@ const router = createRouter({
       component: LoginForm
     },
     {
-      path: '/Menu',
+      path: '/MenuUser',
       name: 'MenuPage',
-      component: Menu
+      component: MenuUser
+
+    },
+    {
+      path: '/MenuAdmin',
+      name: 'AdminPage',
+      component: MenuAdmin
     },
     {
       path: '/Panier',

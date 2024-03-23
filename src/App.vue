@@ -5,7 +5,8 @@
 
       <!-- Utilisez router-link pour naviguer vers les pages correspondantes -->
       <router-link to="/" class="nav-link">Accueil</router-link>
-      <router-link to="/Menu" class="nav-link">Menu</router-link>
+      <router-link to="/MenuUser" class="nav-link">User-Menu</router-link>
+      <router-link to="/MenuAdmin" class="nav-link">Admin</router-link>
       <router-link to="/Panier" class="nav-link">Panier</router-link>
 
       <router-link to="/login" class="nav-link">Se connecter</router-link>
